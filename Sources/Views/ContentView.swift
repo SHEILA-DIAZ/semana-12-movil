@@ -8,6 +8,8 @@ struct ContentView: View {
                 TabView {
                     NavigationStack { ProductosView(usuario: persona) }
                         .tabItem { Label("Productos", systemImage: "shippingbox") }
+                    NavigationStack { ProveedoresView(usuario: persona) }
+                        .tabItem { Label("Proveedores", systemImage: "building.2") }
                 }.id(persona.persistentModelID)
             } else { LoginView() }
         }.environment(sesion).tint(.teal)

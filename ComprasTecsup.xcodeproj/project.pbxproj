@@ -17,6 +17,7 @@
 		3F8E4235A308058F8AD7C1DF /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA1D0BBC022C281EEBBE3F /* Producto.swift */; };
 		506A896733A356FBB37F3350 /* ModelContainerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3F68A85684833543407DE1 /* ModelContainerProvider.swift */; };
 		58EF12E5D7EB459CD5A1239B /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DBA0C40FE95956867B6339 /* Usuario.swift */; };
+		6F014D26FCC95D61226730E2 /* ProveedoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A2A0B7D18274DEA4E2F58B /* ProveedoresView.swift */; };
 		744CA6EB46A1A464C35294AD /* ProductosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AAFEEBBB73923D294AE4DC /* ProductosView.swift */; };
 		87EA7E58E3A2AFC8F2BD7E47 /* Componentes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CEF9FF046DFFBDC2B6C9A0 /* Componentes.swift */; };
 		A1B731B8C8E0C9674A72258E /* ComprasTecsupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07F77CD6652D514E0119907 /* ComprasTecsupApp.swift */; };
@@ -45,6 +46,7 @@
 		10F6FB49062EB45DD6599BDE /* ComprasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasUITests.swift; sourceTree = "<group>"; };
 		120462EF6EEA568F1801AF51 /* Proveedor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proveedor.swift; sourceTree = "<group>"; };
 		133EBBA7FDB002113004004B /* ServicioCompras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicioCompras.swift; sourceTree = "<group>"; };
+		14A2A0B7D18274DEA4E2F58B /* ProveedoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProveedoresView.swift; sourceTree = "<group>"; };
 		57526FAFADEF1C5563FF3CA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5CDF8BC051B3A6CF702FE8C7 /* ComprasTecsup.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ComprasTecsup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		710C218C1B4C1D081E90BB09 /* Autenticacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autenticacion.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				57526FAFADEF1C5563FF3CA8 /* ContentView.swift */,
 				A6741C7AC909F65A7C493FE1 /* LoginView.swift */,
 				E7AAFEEBBB73923D294AE4DC /* ProductosView.swift */,
+				14A2A0B7D18274DEA4E2F58B /* ProveedoresView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				3F8E4235A308058F8AD7C1DF /* Producto.swift in Sources */,
 				744CA6EB46A1A464C35294AD /* ProductosView.swift in Sources */,
 				32B617650C1F61CF5A1D5D44 /* Proveedor.swift in Sources */,
+				6F014D26FCC95D61226730E2 /* ProveedoresView.swift in Sources */,
 				0EA4E769B894BCAA19A0F4A7 /* ServicioCompras.swift in Sources */,
 				58EF12E5D7EB459CD5A1239B /* Usuario.swift in Sources */,
 			);
