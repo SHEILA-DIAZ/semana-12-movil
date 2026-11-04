@@ -6,6 +6,10 @@ struct ContentView: View {
         Group {
             if let persona = sesion.actual {
                 TabView {
+                    if persona.esSupervisor {
+                        NavigationStack { AprobacionesView(usuario: persona) }
+                            .tabItem { Label("Aprobar", systemImage: "checkmark.seal") }
+                    }
                     NavigationStack { ProductosView(usuario: persona) }
                         .tabItem { Label("Productos", systemImage: "shippingbox") }
                     NavigationStack { ProveedoresView(usuario: persona) }

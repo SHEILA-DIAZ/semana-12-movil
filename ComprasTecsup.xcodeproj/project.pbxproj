@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08606C012AC9430C80C8512F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6741C7AC909F65A7C493FE1 /* LoginView.swift */; };
+		0B97CDF3119311606AE682A4 /* AprobacionesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA8A691CE3D99C560E0ACCE /* AprobacionesView.swift */; };
 		0EA4E769B894BCAA19A0F4A7 /* ServicioCompras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133EBBA7FDB002113004004B /* ServicioCompras.swift */; };
 		0F87A3DA945AD9F9D8A7A2CF /* Compra.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC07469991F7085224FA854D /* Compra.swift */; };
 		131452485FC2554EC7EEE6E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC4354AE57A2E05D74D9555 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		5CDF8BC051B3A6CF702FE8C7 /* ComprasTecsup.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ComprasTecsup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		710C218C1B4C1D081E90BB09 /* Autenticacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autenticacion.swift; sourceTree = "<group>"; };
 		749601247E7A5CCA6F43B631 /* MisComprasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisComprasView.swift; sourceTree = "<group>"; };
+		7CA8A691CE3D99C560E0ACCE /* AprobacionesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AprobacionesView.swift; sourceTree = "<group>"; };
 		8510FCED2E30D9397BA8615B /* ComprasTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ComprasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3F68A85684833543407DE1 /* ModelContainerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContainerProvider.swift; sourceTree = "<group>"; };
 		95F167EB6A0777109142D763 /* ComprasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasTests.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		4657F14C9AAD3FC0A99FACF1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7CA8A691CE3D99C560E0ACCE /* AprobacionesView.swift */,
 				B2CEF9FF046DFFBDC2B6C9A0 /* Componentes.swift */,
 				57526FAFADEF1C5563FF3CA8 /* ContentView.swift */,
 				A6741C7AC909F65A7C493FE1 /* LoginView.swift */,
@@ -282,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B97CDF3119311606AE682A4 /* AprobacionesView.swift in Sources */,
 				D5FC90DB6BBB6C8D4F6A8E47 /* Autenticacion.swift in Sources */,
 				87EA7E58E3A2AFC8F2BD7E47 /* Componentes.swift in Sources */,
 				0F87A3DA945AD9F9D8A7A2CF /* Compra.swift in Sources */,
