@@ -7,6 +7,8 @@ struct ContentView: View {
             if let persona = sesion.actual {
                 TabView {
                     if persona.esSupervisor {
+                        NavigationStack { ResumenView(usuario: persona) }
+                            .tabItem { Label("Resumen", systemImage: "chart.bar.xaxis") }
                         NavigationStack { AprobacionesView(usuario: persona) }
                             .tabItem { Label("Aprobar", systemImage: "checkmark.seal") }
                         NavigationStack { PorPagarView(usuario: persona) }
