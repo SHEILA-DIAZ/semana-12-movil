@@ -19,10 +19,13 @@
 		58EF12E5D7EB459CD5A1239B /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DBA0C40FE95956867B6339 /* Usuario.swift */; };
 		6F014D26FCC95D61226730E2 /* ProveedoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A2A0B7D18274DEA4E2F58B /* ProveedoresView.swift */; };
 		744CA6EB46A1A464C35294AD /* ProductosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AAFEEBBB73923D294AE4DC /* ProductosView.swift */; };
+		87A25424E83FD9B5A83DF60B /* ReglasCompra.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB0947F04FD42BC15C6E010 /* ReglasCompra.swift */; };
 		87EA7E58E3A2AFC8F2BD7E47 /* Componentes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CEF9FF046DFFBDC2B6C9A0 /* Componentes.swift */; };
 		A1B731B8C8E0C9674A72258E /* ComprasTecsupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07F77CD6652D514E0119907 /* ComprasTecsupApp.swift */; };
+		BB8249324CA193E561DA936E /* NuevaCompraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107DD64A24C4BEE12820A07A /* NuevaCompraView.swift */; };
 		D42963C951E17E27134343DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57526FAFADEF1C5563FF3CA8 /* ContentView.swift */; };
 		D5FC90DB6BBB6C8D4F6A8E47 /* Autenticacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C218C1B4C1D081E90BB09 /* Autenticacion.swift */; };
+		F88E40DD11D1B2F5E7FF897A /* ServicioCompras+Operaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28AD244656591801C1F6669 /* ServicioCompras+Operaciones.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		107DD64A24C4BEE12820A07A /* NuevaCompraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevaCompraView.swift; sourceTree = "<group>"; };
 		10F6FB49062EB45DD6599BDE /* ComprasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasUITests.swift; sourceTree = "<group>"; };
 		120462EF6EEA568F1801AF51 /* Proveedor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proveedor.swift; sourceTree = "<group>"; };
 		133EBBA7FDB002113004004B /* ServicioCompras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicioCompras.swift; sourceTree = "<group>"; };
@@ -57,11 +61,13 @@
 		A6741C7AC909F65A7C493FE1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		ACC4354AE57A2E05D74D9555 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2CEF9FF046DFFBDC2B6C9A0 /* Componentes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Componentes.swift; sourceTree = "<group>"; };
+		C28AD244656591801C1F6669 /* ServicioCompras+Operaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServicioCompras+Operaciones.swift"; sourceTree = "<group>"; };
 		D07F77CD6652D514E0119907 /* ComprasTecsupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasTecsupApp.swift; sourceTree = "<group>"; };
 		DC07469991F7085224FA854D /* Compra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compra.swift; sourceTree = "<group>"; };
 		E5DA1D0BBC022C281EEBBE3F /* Producto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
 		E7AAFEEBBB73923D294AE4DC /* ProductosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductosView.swift; sourceTree = "<group>"; };
 		E7DBA0C40FE95956867B6339 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		FEB0947F04FD42BC15C6E010 /* ReglasCompra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReglasCompra.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -95,6 +101,7 @@
 				B2CEF9FF046DFFBDC2B6C9A0 /* Componentes.swift */,
 				57526FAFADEF1C5563FF3CA8 /* ContentView.swift */,
 				A6741C7AC909F65A7C493FE1 /* LoginView.swift */,
+				107DD64A24C4BEE12820A07A /* NuevaCompraView.swift */,
 				E7AAFEEBBB73923D294AE4DC /* ProductosView.swift */,
 				14A2A0B7D18274DEA4E2F58B /* ProveedoresView.swift */,
 			);
@@ -115,7 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				710C218C1B4C1D081E90BB09 /* Autenticacion.swift */,
+				FEB0947F04FD42BC15C6E010 /* ReglasCompra.swift */,
 				133EBBA7FDB002113004004B /* ServicioCompras.swift */,
+				C28AD244656591801C1F6669 /* ServicioCompras+Operaciones.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -277,10 +286,13 @@
 				D42963C951E17E27134343DD /* ContentView.swift in Sources */,
 				08606C012AC9430C80C8512F /* LoginView.swift in Sources */,
 				506A896733A356FBB37F3350 /* ModelContainerProvider.swift in Sources */,
+				BB8249324CA193E561DA936E /* NuevaCompraView.swift in Sources */,
 				3F8E4235A308058F8AD7C1DF /* Producto.swift in Sources */,
 				744CA6EB46A1A464C35294AD /* ProductosView.swift in Sources */,
 				32B617650C1F61CF5A1D5D44 /* Proveedor.swift in Sources */,
 				6F014D26FCC95D61226730E2 /* ProveedoresView.swift in Sources */,
+				87A25424E83FD9B5A83DF60B /* ReglasCompra.swift in Sources */,
+				F88E40DD11D1B2F5E7FF897A /* ServicioCompras+Operaciones.swift in Sources */,
 				0EA4E769B894BCAA19A0F4A7 /* ServicioCompras.swift in Sources */,
 				58EF12E5D7EB459CD5A1239B /* Usuario.swift in Sources */,
 			);
