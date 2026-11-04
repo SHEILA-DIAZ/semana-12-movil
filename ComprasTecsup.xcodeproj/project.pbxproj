@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F87A3DA945AD9F9D8A7A2CF /* Compra.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC07469991F7085224FA854D /* Compra.swift */; };
+		131452485FC2554EC7EEE6E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC4354AE57A2E05D74D9555 /* Assets.xcassets */; };
+		1D2787503E1EE16BBE5E7114 /* ComprasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F167EB6A0777109142D763 /* ComprasTests.swift */; };
+		32B617650C1F61CF5A1D5D44 /* Proveedor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120462EF6EEA568F1801AF51 /* Proveedor.swift */; };
+		368A7E4D250FC6D48D2AFF39 /* ComprasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F6FB49062EB45DD6599BDE /* ComprasUITests.swift */; };
+		3F8E4235A308058F8AD7C1DF /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA1D0BBC022C281EEBBE3F /* Producto.swift */; };
+		506A896733A356FBB37F3350 /* ModelContainerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3F68A85684833543407DE1 /* ModelContainerProvider.swift */; };
+		58EF12E5D7EB459CD5A1239B /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DBA0C40FE95956867B6339 /* Usuario.swift */; };
+		A1B731B8C8E0C9674A72258E /* ComprasTecsupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07F77CD6652D514E0119907 /* ComprasTecsupApp.swift */; };
+		D42963C951E17E27134343DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57526FAFADEF1C5563FF3CA8 /* ContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14DA4A97FADC5D26E1846DDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34C859A94388A6A9C633A7BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D03338D748A22804238288AF;
+			remoteInfo = ComprasTecsup;
+		};
+		B6595EB5405EAD4EEA689A14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34C859A94388A6A9C633A7BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D03338D748A22804238288AF;
+			remoteInfo = ComprasTecsup;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10F6FB49062EB45DD6599BDE /* ComprasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasUITests.swift; sourceTree = "<group>"; };
+		120462EF6EEA568F1801AF51 /* Proveedor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proveedor.swift; sourceTree = "<group>"; };
+		57526FAFADEF1C5563FF3CA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5CDF8BC051B3A6CF702FE8C7 /* ComprasTecsup.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ComprasTecsup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8510FCED2E30D9397BA8615B /* ComprasTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ComprasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E3F68A85684833543407DE1 /* ModelContainerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContainerProvider.swift; sourceTree = "<group>"; };
+		95F167EB6A0777109142D763 /* ComprasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasTests.swift; sourceTree = "<group>"; };
+		A45C7B64201EBA161E60A6D4 /* ComprasUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ComprasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC4354AE57A2E05D74D9555 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D07F77CD6652D514E0119907 /* ComprasTecsupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasTecsupApp.swift; sourceTree = "<group>"; };
+		DC07469991F7085224FA854D /* Compra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compra.swift; sourceTree = "<group>"; };
+		E5DA1D0BBC022C281EEBBE3F /* Producto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
+		E7DBA0C40FE95956867B6339 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		14EC24E9C522C0F2E2BED935 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				ACC4354AE57A2E05D74D9555 /* Assets.xcassets */,
+				D07F77CD6652D514E0119907 /* ComprasTecsupApp.swift */,
+				AF1E543777A4734BEB6FB4F2 /* Data */,
+				31396E0165EA8F4532104F5B /* Models */,
+				4657F14C9AAD3FC0A99FACF1 /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		31396E0165EA8F4532104F5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC07469991F7085224FA854D /* Compra.swift */,
+				E5DA1D0BBC022C281EEBBE3F /* Producto.swift */,
+				120462EF6EEA568F1801AF51 /* Proveedor.swift */,
+				E7DBA0C40FE95956867B6339 /* Usuario.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4657F14C9AAD3FC0A99FACF1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				57526FAFADEF1C5563FF3CA8 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		50CF429E8231895F4C8540B1 = {
+			isa = PBXGroup;
+			children = (
+				14EC24E9C522C0F2E2BED935 /* Sources */,
+				E12CCB714639C86F45DE0D21 /* Tests */,
+				BF5D2F2553D21930FA3F9728 /* UITests */,
+				F0DEB5C0C59A3BD3AFF028B4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF1E543777A4734BEB6FB4F2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8E3F68A85684833543407DE1 /* ModelContainerProvider.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BF5D2F2553D21930FA3F9728 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				10F6FB49062EB45DD6599BDE /* ComprasUITests.swift */,
+			);
+			path = UITests;
+			sourceTree = "<group>";
+		};
+		E12CCB714639C86F45DE0D21 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				95F167EB6A0777109142D763 /* ComprasTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		F0DEB5C0C59A3BD3AFF028B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CDF8BC051B3A6CF702FE8C7 /* ComprasTecsup.app */,
+				8510FCED2E30D9397BA8615B /* ComprasTests.xctest */,
+				A45C7B64201EBA161E60A6D4 /* ComprasUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		737C0EC7AB4ABC7CEC4429F1 /* ComprasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A848C9B541F79B9695834A5 /* Build configuration list for PBXNativeTarget "ComprasTests" */;
+			buildPhases = (
+				3414D4CC57774DB951CA69B3 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A77FD93F0260E721F4479FAD /* PBXTargetDependency */,
+			);
+			name = ComprasTests;
+			packageProductDependencies = (
+			);
+			productName = ComprasTests;
+			productReference = 8510FCED2E30D9397BA8615B /* ComprasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A3F33FA43E15DE7D771C0A79 /* ComprasUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60D4F9E23F20F578701688B7 /* Build configuration list for PBXNativeTarget "ComprasUITests" */;
+			buildPhases = (
+				05AE79FCE4D1827AA3597D0B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				852C622D398918ADA7FF6C01 /* PBXTargetDependency */,
+			);
+			name = ComprasUITests;
+			packageProductDependencies = (
+			);
+			productName = ComprasUITests;
+			productReference = A45C7B64201EBA161E60A6D4 /* ComprasUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		D03338D748A22804238288AF /* ComprasTecsup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 210E2AF48EF1B2CDFB635942 /* Build configuration list for PBXNativeTarget "ComprasTecsup" */;
+			buildPhases = (
+				0D2030914047EE056759B788 /* Sources */,
+				2682DB8C83D30B5291693D51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ComprasTecsup;
+			packageProductDependencies = (
+			);
+			productName = ComprasTecsup;
+			productReference = 5CDF8BC051B3A6CF702FE8C7 /* ComprasTecsup.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		34C859A94388A6A9C633A7BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					A3F33FA43E15DE7D771C0A79 = {
+						TestTargetID = D03338D748A22804238288AF;
+					};
+				};
+			};
+			buildConfigurationList = 2516669EA2341067EFD6A68A /* Build configuration list for PBXProject "ComprasTecsup" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 50CF429E8231895F4C8540B1;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F0DEB5C0C59A3BD3AFF028B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D03338D748A22804238288AF /* ComprasTecsup */,
+				737C0EC7AB4ABC7CEC4429F1 /* ComprasTests */,
+				A3F33FA43E15DE7D771C0A79 /* ComprasUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2682DB8C83D30B5291693D51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131452485FC2554EC7EEE6E9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05AE79FCE4D1827AA3597D0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				368A7E4D250FC6D48D2AFF39 /* ComprasUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D2030914047EE056759B788 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F87A3DA945AD9F9D8A7A2CF /* Compra.swift in Sources */,
+				A1B731B8C8E0C9674A72258E /* ComprasTecsupApp.swift in Sources */,
+				D42963C951E17E27134343DD /* ContentView.swift in Sources */,
+				506A896733A356FBB37F3350 /* ModelContainerProvider.swift in Sources */,
+				3F8E4235A308058F8AD7C1DF /* Producto.swift in Sources */,
+				32B617650C1F61CF5A1D5D44 /* Proveedor.swift in Sources */,
+				58EF12E5D7EB459CD5A1239B /* Usuario.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3414D4CC57774DB951CA69B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D2787503E1EE16BBE5E7114 /* ComprasTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		852C622D398918ADA7FF6C01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D03338D748A22804238288AF /* ComprasTecsup */;
+			targetProxy = B6595EB5405EAD4EEA689A14 /* PBXContainerItemProxy */;
+		};
+		A77FD93F0260E721F4479FAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D03338D748A22804238288AF /* ComprasTecsup */;
+			targetProxy = 14DA4A97FADC5D26E1846DDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2CF20BFFB66EDC94462A2EBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Compras;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pe.tecsup.grupob.compras;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		581C9E520A66AF5FB16DACE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pe.tecsup.grupob.compras.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ComprasTecsup;
+			};
+			name = Debug;
+		};
+		76317D0300E52C0A4ED8269A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pe.tecsup.grupob.compras.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ComprasTecsup.app/ComprasTecsup";
+			};
+			name = Debug;
+		};
+		7B8186BA501B009F62C6724D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pe.tecsup.grupob.compras.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ComprasTecsup;
+			};
+			name = Release;
+		};
+		877661A9C9D5592766AE1E21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pe.tecsup.grupob.compras.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ComprasTecsup.app/ComprasTecsup";
+			};
+			name = Release;
+		};
+		89F90E36A474795B0054103A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Compras;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pe.tecsup.grupob.compras;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B8009566B0941341D89B07D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E437FC4677D5472F768E0B3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		210E2AF48EF1B2CDFB635942 /* Build configuration list for PBXNativeTarget "ComprasTecsup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89F90E36A474795B0054103A /* Debug */,
+				2CF20BFFB66EDC94462A2EBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2516669EA2341067EFD6A68A /* Build configuration list for PBXProject "ComprasTecsup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E437FC4677D5472F768E0B3E /* Debug */,
+				B8009566B0941341D89B07D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3A848C9B541F79B9695834A5 /* Build configuration list for PBXNativeTarget "ComprasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76317D0300E52C0A4ED8269A /* Debug */,
+				877661A9C9D5592766AE1E21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		60D4F9E23F20F578701688B7 /* Build configuration list for PBXNativeTarget "ComprasUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				581C9E520A66AF5FB16DACE1 /* Debug */,
+				7B8186BA501B009F62C6724D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 34C859A94388A6A9C633A7BF /* Project object */;
+}
