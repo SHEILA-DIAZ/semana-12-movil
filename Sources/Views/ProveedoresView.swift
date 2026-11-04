@@ -9,6 +9,7 @@ struct ProveedoresView: View {
     @State private var nuevo = false
     @State private var seleccionado: Proveedor?
     @State private var error: String?
+    @State private var versionLista = 0
     private var filtrados: [Proveedor] {
         proveedores.filter { busqueda.isEmpty || $0.nombre.localizedCaseInsensitiveContains(busqueda) || $0.ruc.contains(busqueda) }
     }
@@ -28,10 +29,15 @@ struct ProveedoresView: View {
             .onDelete { offsets in
                 let seleccion = offsets.map { filtrados[$0] }
                 do { for p in seleccion { try ServicioCompras(context: context).eliminarProveedor(p, actor: usuario) } }
-                catch { self.error = error.localizedDescription }
+                catch {
+                    // onDelete anima la fila de forma optimista; restaurar su identidad si el servicio bloquea el borrado.
+                    versionLista += 1
+                    self.error = error.localizedDescription
+                }
             }
             .deleteDisabled(!usuario.esSupervisor)
         }
+        .id(versionLista)
         .navigationTitle("Proveedores").searchable(text: $busqueda, prompt: "Buscar nombre o RUC")
         .toolbar {
             ToolbarItem(placement: .topBarLeading) { MenuCuenta() }

@@ -31,6 +31,10 @@ final class ComprasUITests: XCTestCase {
         func registrar(_ usuario: String, rol: String, captura: Bool = false) {
             pulsar(app.buttons["crearCuenta"])
             let seleccion = app.buttons[rol]
+            // En el primer arranque iOS puede descartar el toque durante la transición inicial.
+            if !seleccion.waitForExistence(timeout: 3), app.buttons["crearCuenta"].exists {
+                app.buttons["crearCuenta"].tap()
+            }
             pulsar(seleccion)
             escribir(app.textFields["registroNombre"], "Persona \(usuario)")
             escribir(app.textFields["registroUsuario"], usuario)
@@ -123,7 +127,7 @@ final class ComprasUITests: XCTestCase {
         pulsar(app.buttons["Delete"])
         XCTAssertTrue(app.alerts.staticTexts["No se puede borrar un producto que tiene compras."].waitForExistence(timeout: 5))
         app.alerts.buttons["Aceptar"].tap()
-        XCTAssertTrue(app.staticTexts[producto].exists)
+        XCTAssertTrue(app.staticTexts[producto].waitForExistence(timeout: 5))
         pestaña("Por pagar")
         let pago = app.descendants(matching: .any).matching(identifier: "pago-\(producto)").firstMatch
         XCTAssertTrue(pago.waitForExistence(timeout: 5))

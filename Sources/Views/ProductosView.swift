@@ -9,6 +9,7 @@ struct ProductosView: View {
     @State private var nuevo = false
     @State private var seleccionado: Producto?
     @State private var error: String?
+    @State private var versionLista = 0
     private var filtrados: [Producto] {
         productos.filter { busqueda.isEmpty || $0.nombre.localizedCaseInsensitiveContains(busqueda) || $0.categoria.localizedCaseInsensitiveContains(busqueda) }
     }
@@ -28,7 +29,11 @@ struct ProductosView: View {
             .onDelete { offsets in
                 let seleccion = offsets.map { filtrados[$0] }
                 do { for p in seleccion { try ServicioCompras(context: context).eliminarProducto(p, actor: usuario) } }
-                catch { self.error = error.localizedDescription }
+                catch {
+                    // onDelete anima la fila de forma optimista; restaurar su identidad si el servicio bloquea el borrado.
+                    versionLista += 1
+                    self.error = error.localizedDescription
+                }
             }
             .deleteDisabled(!usuario.esSupervisor)
             Section("Valor del inventario") {
@@ -36,6 +41,7 @@ struct ProductosView: View {
                     .accessibilityIdentifier("valorInventario")
             }
         }
+        .id(versionLista)
         .navigationTitle("Productos").searchable(text: $busqueda, prompt: "Buscar producto o categoría")
         .toolbar {
             ToolbarItem(placement: .topBarLeading) { MenuCuenta() }
