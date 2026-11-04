@@ -5,13 +5,10 @@ struct ContentView: View {
     var body: some View {
         Group {
             if let persona = sesion.actual {
-                NavigationStack {
-                    VStack(spacing: 12) {
-                        LogoCompras()
-                        Text("Hola, \(persona.nombre)").font(.title2)
-                        Text(persona.rol).foregroundStyle(.secondary)
-                    }.navigationTitle("Compras").toolbar { MenuCuenta() }
-                }
+                TabView {
+                    NavigationStack { ProductosView(usuario: persona) }
+                        .tabItem { Label("Productos", systemImage: "shippingbox") }
+                }.id(persona.persistentModelID)
             } else { LoginView() }
         }.environment(sesion).tint(.teal)
     }
