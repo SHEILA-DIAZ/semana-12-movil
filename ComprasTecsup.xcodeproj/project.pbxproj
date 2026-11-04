@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08606C012AC9430C80C8512F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6741C7AC909F65A7C493FE1 /* LoginView.swift */; };
 		0F87A3DA945AD9F9D8A7A2CF /* Compra.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC07469991F7085224FA854D /* Compra.swift */; };
 		131452485FC2554EC7EEE6E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC4354AE57A2E05D74D9555 /* Assets.xcassets */; };
 		1D2787503E1EE16BBE5E7114 /* ComprasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F167EB6A0777109142D763 /* ComprasTests.swift */; };
@@ -15,8 +16,10 @@
 		3F8E4235A308058F8AD7C1DF /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA1D0BBC022C281EEBBE3F /* Producto.swift */; };
 		506A896733A356FBB37F3350 /* ModelContainerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3F68A85684833543407DE1 /* ModelContainerProvider.swift */; };
 		58EF12E5D7EB459CD5A1239B /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DBA0C40FE95956867B6339 /* Usuario.swift */; };
+		87EA7E58E3A2AFC8F2BD7E47 /* Componentes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CEF9FF046DFFBDC2B6C9A0 /* Componentes.swift */; };
 		A1B731B8C8E0C9674A72258E /* ComprasTecsupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07F77CD6652D514E0119907 /* ComprasTecsupApp.swift */; };
 		D42963C951E17E27134343DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57526FAFADEF1C5563FF3CA8 /* ContentView.swift */; };
+		D5FC90DB6BBB6C8D4F6A8E47 /* Autenticacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C218C1B4C1D081E90BB09 /* Autenticacion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,11 +44,14 @@
 		120462EF6EEA568F1801AF51 /* Proveedor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proveedor.swift; sourceTree = "<group>"; };
 		57526FAFADEF1C5563FF3CA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5CDF8BC051B3A6CF702FE8C7 /* ComprasTecsup.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ComprasTecsup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		710C218C1B4C1D081E90BB09 /* Autenticacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autenticacion.swift; sourceTree = "<group>"; };
 		8510FCED2E30D9397BA8615B /* ComprasTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ComprasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3F68A85684833543407DE1 /* ModelContainerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContainerProvider.swift; sourceTree = "<group>"; };
 		95F167EB6A0777109142D763 /* ComprasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasTests.swift; sourceTree = "<group>"; };
 		A45C7B64201EBA161E60A6D4 /* ComprasUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ComprasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6741C7AC909F65A7C493FE1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		ACC4354AE57A2E05D74D9555 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2CEF9FF046DFFBDC2B6C9A0 /* Componentes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Componentes.swift; sourceTree = "<group>"; };
 		D07F77CD6652D514E0119907 /* ComprasTecsupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasTecsupApp.swift; sourceTree = "<group>"; };
 		DC07469991F7085224FA854D /* Compra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compra.swift; sourceTree = "<group>"; };
 		E5DA1D0BBC022C281EEBBE3F /* Producto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
@@ -60,6 +66,7 @@
 				D07F77CD6652D514E0119907 /* ComprasTecsupApp.swift */,
 				AF1E543777A4734BEB6FB4F2 /* Data */,
 				31396E0165EA8F4532104F5B /* Models */,
+				5D6E00E2EF0BD73394A05CCB /* Services */,
 				4657F14C9AAD3FC0A99FACF1 /* Views */,
 			);
 			path = Sources;
@@ -79,7 +86,9 @@
 		4657F14C9AAD3FC0A99FACF1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B2CEF9FF046DFFBDC2B6C9A0 /* Componentes.swift */,
 				57526FAFADEF1C5563FF3CA8 /* ContentView.swift */,
+				A6741C7AC909F65A7C493FE1 /* LoginView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -92,6 +101,14 @@
 				BF5D2F2553D21930FA3F9728 /* UITests */,
 				F0DEB5C0C59A3BD3AFF028B4 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		5D6E00E2EF0BD73394A05CCB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				710C218C1B4C1D081E90BB09 /* Autenticacion.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		AF1E543777A4734BEB6FB4F2 /* Data */ = {
@@ -244,9 +261,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5FC90DB6BBB6C8D4F6A8E47 /* Autenticacion.swift in Sources */,
+				87EA7E58E3A2AFC8F2BD7E47 /* Componentes.swift in Sources */,
 				0F87A3DA945AD9F9D8A7A2CF /* Compra.swift in Sources */,
 				A1B731B8C8E0C9674A72258E /* ComprasTecsupApp.swift in Sources */,
 				D42963C951E17E27134343DD /* ContentView.swift in Sources */,
+				08606C012AC9430C80C8512F /* LoginView.swift in Sources */,
 				506A896733A356FBB37F3350 /* ModelContainerProvider.swift in Sources */,
 				3F8E4235A308058F8AD7C1DF /* Producto.swift in Sources */,
 				32B617650C1F61CF5A1D5D44 /* Proveedor.swift in Sources */,
