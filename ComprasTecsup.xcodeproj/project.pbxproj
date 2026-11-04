@@ -19,6 +19,7 @@
 		58EF12E5D7EB459CD5A1239B /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DBA0C40FE95956867B6339 /* Usuario.swift */; };
 		6F014D26FCC95D61226730E2 /* ProveedoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A2A0B7D18274DEA4E2F58B /* ProveedoresView.swift */; };
 		744CA6EB46A1A464C35294AD /* ProductosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AAFEEBBB73923D294AE4DC /* ProductosView.swift */; };
+		86B17090F2A6B6BF8B0647A5 /* MisComprasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749601247E7A5CCA6F43B631 /* MisComprasView.swift */; };
 		87A25424E83FD9B5A83DF60B /* ReglasCompra.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB0947F04FD42BC15C6E010 /* ReglasCompra.swift */; };
 		87EA7E58E3A2AFC8F2BD7E47 /* Componentes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CEF9FF046DFFBDC2B6C9A0 /* Componentes.swift */; };
 		A1B731B8C8E0C9674A72258E /* ComprasTecsupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07F77CD6652D514E0119907 /* ComprasTecsupApp.swift */; };
@@ -54,6 +55,7 @@
 		57526FAFADEF1C5563FF3CA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5CDF8BC051B3A6CF702FE8C7 /* ComprasTecsup.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ComprasTecsup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		710C218C1B4C1D081E90BB09 /* Autenticacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autenticacion.swift; sourceTree = "<group>"; };
+		749601247E7A5CCA6F43B631 /* MisComprasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisComprasView.swift; sourceTree = "<group>"; };
 		8510FCED2E30D9397BA8615B /* ComprasTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ComprasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3F68A85684833543407DE1 /* ModelContainerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContainerProvider.swift; sourceTree = "<group>"; };
 		95F167EB6A0777109142D763 /* ComprasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasTests.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				B2CEF9FF046DFFBDC2B6C9A0 /* Componentes.swift */,
 				57526FAFADEF1C5563FF3CA8 /* ContentView.swift */,
 				A6741C7AC909F65A7C493FE1 /* LoginView.swift */,
+				749601247E7A5CCA6F43B631 /* MisComprasView.swift */,
 				107DD64A24C4BEE12820A07A /* NuevaCompraView.swift */,
 				E7AAFEEBBB73923D294AE4DC /* ProductosView.swift */,
 				14A2A0B7D18274DEA4E2F58B /* ProveedoresView.swift */,
@@ -285,6 +288,7 @@
 				A1B731B8C8E0C9674A72258E /* ComprasTecsupApp.swift in Sources */,
 				D42963C951E17E27134343DD /* ContentView.swift in Sources */,
 				08606C012AC9430C80C8512F /* LoginView.swift in Sources */,
+				86B17090F2A6B6BF8B0647A5 /* MisComprasView.swift in Sources */,
 				506A896733A356FBB37F3350 /* ModelContainerProvider.swift in Sources */,
 				BB8249324CA193E561DA936E /* NuevaCompraView.swift in Sources */,
 				3F8E4235A308058F8AD7C1DF /* Producto.swift in Sources */,

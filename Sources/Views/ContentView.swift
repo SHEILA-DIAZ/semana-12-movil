@@ -13,6 +13,8 @@ struct ContentView: View {
                     if !persona.esSupervisor {
                         NavigationStack { NuevaCompraView(usuario: persona) }
                             .tabItem { Label("Compra", systemImage: "cart.badge.plus") }
+                        NavigationStack { MisComprasView(usuario: persona) }
+                            .tabItem { Label("Mis compras", systemImage: "list.bullet.rectangle") }
                     }
                 }.id(persona.persistentModelID)
             } else { LoginView() }
