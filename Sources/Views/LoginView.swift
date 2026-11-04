@@ -7,6 +7,7 @@ struct LoginView: View {
     @State private var usuario = ""
     @State private var clave = ""
     @State private var error: String?
+    @State private var mostrarRegistro = false
 
     var body: some View {
         NavigationStack {
@@ -32,11 +33,12 @@ struct LoginView: View {
                     }
                     .buttonStyle(.borderedProminent).controlSize(.large).frame(maxWidth: .infinity)
                     .disabled(usuario.limpio.isEmpty || clave.isEmpty).accessibilityIdentifier("ingresar")
-                    NavigationLink("¿Primera vez? Crear cuenta") { RegistroView() }
+                    Button("¿Primera vez? Crear cuenta") { mostrarRegistro = true }
                         .accessibilityIdentifier("crearCuenta")
                 }.padding(24).frame(maxWidth: 520).frame(maxWidth: .infinity)
             }
             .background(Color(.systemGroupedBackground)).scrollDismissesKeyboard(.interactively)
+            .navigationDestination(isPresented: $mostrarRegistro) { RegistroView() }
         }
     }
 }

@@ -39,11 +39,9 @@ struct MenuCuenta: View {
 
 struct LogoCompras: View {
     var body: some View {
-        Image(systemName: "shippingbox.fill")
-            .font(.system(size: 42, weight: .semibold)).foregroundStyle(.white)
+        Image("MarcaCompras").resizable().scaledToFit()
             .frame(width: 90, height: 90)
-            .background(LinearGradient(colors: [.teal, .blue], startPoint: .topLeading, endPoint: .bottomTrailing),
-                        in: RoundedRectangle(cornerRadius: 23))
+            .clipShape(RoundedRectangle(cornerRadius: 23))
             .accessibilityHidden(true)
     }
 }
