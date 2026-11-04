@@ -9,6 +9,8 @@ struct ContentView: View {
                     if persona.esSupervisor {
                         NavigationStack { AprobacionesView(usuario: persona) }
                             .tabItem { Label("Aprobar", systemImage: "checkmark.seal") }
+                        NavigationStack { PorPagarView(usuario: persona) }
+                            .tabItem { Label("Por pagar", systemImage: "creditcard") }
                     }
                     NavigationStack { ProductosView(usuario: persona) }
                         .tabItem { Label("Productos", systemImage: "shippingbox") }
