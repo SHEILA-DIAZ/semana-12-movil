@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014E08BE3DDF1A64DDF53B19 /* ConsultasCompras.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28AB366C3965191E8807684 /* ConsultasCompras.swift */; };
 		08606C012AC9430C80C8512F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6741C7AC909F65A7C493FE1 /* LoginView.swift */; };
 		0B97CDF3119311606AE682A4 /* AprobacionesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA8A691CE3D99C560E0ACCE /* AprobacionesView.swift */; };
 		0EA4E769B894BCAA19A0F4A7 /* ServicioCompras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133EBBA7FDB002113004004B /* ServicioCompras.swift */; };
@@ -73,6 +74,7 @@
 		C28AD244656591801C1F6669 /* ServicioCompras+Operaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServicioCompras+Operaciones.swift"; sourceTree = "<group>"; };
 		CA6209881A0A872AB02C2F83 /* ResumenCompras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumenCompras.swift; sourceTree = "<group>"; };
 		D07F77CD6652D514E0119907 /* ComprasTecsupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasTecsupApp.swift; sourceTree = "<group>"; };
+		D28AB366C3965191E8807684 /* ConsultasCompras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultasCompras.swift; sourceTree = "<group>"; };
 		DC07469991F7085224FA854D /* Compra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compra.swift; sourceTree = "<group>"; };
 		E5DA1D0BBC022C281EEBBE3F /* Producto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
 		E7AAFEEBBB73923D294AE4DC /* ProductosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductosView.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				710C218C1B4C1D081E90BB09 /* Autenticacion.swift */,
+				D28AB366C3965191E8807684 /* ConsultasCompras.swift */,
 				FEB0947F04FD42BC15C6E010 /* ReglasCompra.swift */,
 				CA6209881A0A872AB02C2F83 /* ResumenCompras.swift */,
 				133EBBA7FDB002113004004B /* ServicioCompras.swift */,
@@ -299,6 +302,7 @@
 				87EA7E58E3A2AFC8F2BD7E47 /* Componentes.swift in Sources */,
 				0F87A3DA945AD9F9D8A7A2CF /* Compra.swift in Sources */,
 				A1B731B8C8E0C9674A72258E /* ComprasTecsupApp.swift in Sources */,
+				014E08BE3DDF1A64DDF53B19 /* ConsultasCompras.swift in Sources */,
 				D42963C951E17E27134343DD /* ContentView.swift in Sources */,
 				08606C012AC9430C80C8512F /* LoginView.swift in Sources */,
 				86B17090F2A6B6BF8B0647A5 /* MisComprasView.swift in Sources */,

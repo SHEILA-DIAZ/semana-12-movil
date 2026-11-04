@@ -40,10 +40,8 @@ private struct PagosLista: View {
         self.usuario = usuario; self.ahora = ahora
         let pagadas = filtro == .pagadas
         let soloVencidas = filtro == .vencidas
-        let aprobada = EstadoCompra.aprobada.rawValue
-        _compras = Query(filter: #Predicate<Compra> {
-            $0.estado == aprobada && $0.alCredito && $0.pagada == pagadas && (!soloVencidas || $0.vence < ahora)
-        }, sort: \Compra.vence)
+        _compras = Query(filter: ConsultasCompras.pagos(pagadas: pagadas, vencidas: soloVencidas, ahora: ahora),
+                         sort: \Compra.vence)
     }
     var body: some View {
         List {

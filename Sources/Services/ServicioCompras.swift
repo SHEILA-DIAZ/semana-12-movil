@@ -7,7 +7,10 @@ final class ServicioCompras {
     init(context: ModelContext) { self.context = context }
 
     func exigirSupervisor(_ actor: Usuario) throws {
-        guard actor.esSupervisor else { throw ErrorCompras.validacion("Esta operación requiere el rol Supervisor.") }
+        guard actor.modelContext === context, actor.esSupervisor else { throw ErrorCompras.validacion("Esta operación requiere el rol Supervisor.") }
+    }
+    func exigirCompraVigente(_ compra: Compra) throws {
+        guard compra.modelContext === context else { throw ErrorCompras.validacion("La compra no pertenece al almacén de esta sesión.") }
     }
     func transaccion(_ cambios: () -> Void) throws {
         cambios()

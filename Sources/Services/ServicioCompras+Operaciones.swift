@@ -24,6 +24,7 @@ extension ServicioCompras {
     }
     func aprobar(_ compra: Compra, actor: Usuario) throws {
         try exigirSupervisor(actor)
+        try exigirCompraVigente(compra)
         guard compra.estado == EstadoCompra.pendiente.rawValue else {
             throw ErrorCompras.validacion("Solo se puede aprobar una compra pendiente.")
         }
@@ -33,6 +34,7 @@ extension ServicioCompras {
     }
     func rechazar(_ compra: Compra, motivo: String, actor: Usuario) throws {
         try exigirSupervisor(actor)
+        try exigirCompraVigente(compra)
         guard compra.estado == EstadoCompra.pendiente.rawValue else { throw ErrorCompras.validacion("Solo se puede rechazar una compra pendiente.") }
         guard !motivo.limpio.isEmpty else { throw ErrorCompras.validacion("Escribe un motivo de rechazo.") }
         try transaccion {
@@ -42,6 +44,7 @@ extension ServicioCompras {
     }
     func pagar(_ compra: Compra, actor: Usuario) throws {
         try exigirSupervisor(actor)
+        try exigirCompraVigente(compra)
         guard compra.estaPorPagar else { throw ErrorCompras.validacion("La compra no tiene un pago pendiente.") }
         try transaccion { compra.pagada = true }
     }

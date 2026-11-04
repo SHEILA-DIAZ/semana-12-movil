@@ -35,10 +35,8 @@ private struct ComprasPropias: View {
     let busqueda: String
     init(usuario: Usuario, estado: String, busqueda: String) {
         let nombreUsuario = usuario.usuario
-        let todas = estado.isEmpty
-        _compras = Query(filter: #Predicate<Compra> {
-            $0.comprador?.usuario == nombreUsuario && (todas || $0.estado == estado)
-        }, sort: \Compra.fecha, order: .reverse)
+        _compras = Query(filter: ConsultasCompras.propias(usuario: nombreUsuario, estado: estado),
+                         sort: \Compra.fecha, order: .reverse)
         self.busqueda = busqueda
     }
     private var filtradas: [Compra] {
