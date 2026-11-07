@@ -15,11 +15,7 @@ Aplicación iOS del **Grupo B · Caso Compras** del Laboratorio 11, implementada
 
 ## Estado de la continuación en Windows
 
-Revisión del **2026-11-06** sobre `ia-asistida`, a partir de `da1a004`. Se leyeron las siete páginas del [PDF específico del Grupo B](documentos/Grupo%20B%20%C2%B7%20Caso%20Compras%20%28SwiftUI%20%2B%20SwiftData%29.pdf), incluidas las maquetas B1–B9 y la rúbrica, y se contrastaron con el código y los commits existentes. Las nueve pantallas y las reglas principales ya estaban implementadas.
-
-Se completó la búsqueda por proveedor en B8 y la validación del contexto de los registros al mantener catálogos. Hay **14 métodos XCTest**, incluidos los nueve casos del PDF y una nueva prueba de aislamiento entre almacenes, más el recorrido UI existente. Esta continuación verificó sintaxis de los 24 archivos Swift, referencias del proyecto/esquema e ícono PNG RGB de 1024 × 1024. **No se compiló la aplicación ni se ejecutaron XCTest o simulador iOS en Windows.**
-
-La ejecución del verificador de cálculos Foundation quedó bloqueada porque la instalación local no encuentra `stdlib.h` del entorno C de Windows. La matriz de evidencia y los pasos restantes están en [PRUEBAS.md](documentos/PRUEBAS.md). Se conserva la evidencia histórica documentada sin presentarla como una ejecución actual.
+Las nueve pantallas están implementadas, incluida la búsqueda por proveedor en B8. Hay 14 pruebas unitarias y un recorrido UI. En Windows se verificó la sintaxis; la compilación y ejecución en iOS quedan pendientes. La evidencia y los pasos para macOS están en [PRUEBAS.md](documentos/PRUEBAS.md).
 
 ## Abrir y ejecutar
 
@@ -95,12 +91,10 @@ El ícono existente corresponde a la referencia **Ícono de Compras (Grupo B)**:
 En Windows con Swift instalado, comprobar sintaxis:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File scripts\verificar_windows.ps1 -SoloSintaxis
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts\verificar_windows.ps1
 ```
 
-Sin `-SoloSintaxis`, el script intenta compilar y ejecutar **el archivo real** `ReglasCompra.swift` con 24 comprobaciones numéricas y dobles mínimos de Producto/ErrorCompras, sin SwiftData ni interfaz. Requiere MSVC y Windows SDK correctamente configurados. Los dobles están fuera del target iOS. Ese modo no pudo ejecutarse en este equipo por falta de cabeceras C.
-
-En macOS con Xcode e iOS 17 o posterior, listar primero los destinos disponibles y elegir un simulador instalado. El entorno Xcode 26.3 descrito en los registros anteriores es histórico y no se verificó en esta continuación.
+El script solo analiza sintaxis. Las pruebas de negocio, persistencia e interfaz se ejecutan en macOS con Xcode. Listar primero los destinos disponibles y elegir un simulador instalado:
 
 ```sh
 export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
@@ -120,8 +114,6 @@ La firma está desactivada para el simulador; para instalar en un dispositivo f�
 - [PDF específico del Grupo B, siete páginas](documentos/Grupo%20B%20%C2%B7%20Caso%20Compras%20%28SwiftUI%20%2B%20SwiftData%29.pdf).
 - [Guía principal](documentos/GLAB-S11-JLEONS-2026-02.pdf).
 
-Los commits se realizan en `ia-asistida`, con nombre SHEILA-DIAZ y correo sheila.diaz@tecsup.edu.pe. `manual` conserva solo el punto inicial del expediente; no se atribuye a trabajo manual el código generado con IA. El visto bueno docente debe aportarlo la estudiante: no se registra como concedido. Por instrucción expresa de la propietaria se avanzó con la construcción asistida.
-
-La continuación publica commits progresivos únicamente en `ia-asistida`, sin cambios a `main`, squash ni force push. En macOS queda por compilar, ejecutar las 14 pruebas y el recorrido UI, revisar B1–B9 y guardar capturas de la app y de Inicio con el nombre Compras. La página 7 del PDF ya contiene una captura, que no acredita esta revisión del código. El visto bueno, las conclusiones personales y la defensa oral corresponden a la estudiante.
+Los cambios se publican en `ia-asistida`, sin modificar `main`, squash ni force push. `manual` conserva el punto inicial del expediente. El visto bueno docente, las conclusiones personales y la defensa oral corresponden a la estudiante.
 
 Por tratarse de la práctica, la clave se guarda como texto y el rol se elige al registrarse, tal como establece el PDF. No se presenta este mecanismo como autenticación de producción.

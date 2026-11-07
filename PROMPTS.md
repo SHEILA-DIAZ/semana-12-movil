@@ -1,5 +1,13 @@
 # Registro de asistencia de IA
 
+## Limpieza del proyecto
+
+**Solicitud:** quitar elementos sin uso y duplicados.
+
+**Cambio:** se eliminó `scripts/ReglasCompraWindows.swift`, que repetía escenarios de XCTest con copias de Producto y ErrorCompras y no pudo ejecutarse en este entorno. El script de Windows queda limitado al análisis sintáctico que sí funciona. Se redujo el contenido repetido del README y se actualizaron las instrucciones. Se limpiaron las dependencias temporales de lectura del PDF, sus renders y la carpeta de compilación vacía. Se conservan las 14 pruebas XCTest, las pantallas, las reglas, ambos PDFs con distinto alcance y los recursos gráficos utilizados por iOS y el login.
+
+**Verificación:** análisis sintáctico de las 24 fuentes Swift, referencias del proyecto, ausencia de referencias activas al verificador eliminado y revisión del diff. La compilación iOS sigue pendiente en macOS. Los apartados siguientes conservan el registro histórico, incluidas herramientas retiradas durante esta limpieza.
+
 ## Continuación en Windows · 2026-11-06 · B8
 
 **Solicitud:** continuar el proyecto existente en `ia-asistida`, leer las siete páginas de `documentos/Grupo B · Caso Compras (SwiftUI + SwiftData).pdf`, contrastar código e historial, completar pendientes y publicar cada etapa sin modificar main.

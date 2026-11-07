@@ -10,7 +10,7 @@ Resultado real en esta continuación:
 - `git diff --check`: sin errores.
 - Proyecto Xcode: los 24 archivos figuran referenciados; esquema XML válido con targets unitario y UI. Catálogo AppIcon: PNG RGB 1024 × 1024 sin canal alfa; Display Name configurado en Compras.
 - **14 métodos XCTest definidos**, con los nueve casos originales y la nueva regresión de edición/borrado entre contextos. No ejecutados en Windows.
-- `scripts/verificar_windows.ps1 -SoloSintaxis`: ejecutado correctamente. El modo completo intenta compilar el archivo real ReglasCompra con 24 comprobaciones, pero quedó bloqueado por `stdlib.h file not found` / `could not build C module SwiftShims` en la instalación local. No se atribuye éxito numérico a ese intento.
+- `scripts/verificar_windows.ps1`: analiza sintaxis y revisa `git diff --check`. Se eliminó el verificador numérico auxiliar que duplicaba escenarios de XCTest y no pudo compilar por falta de cabeceras C de Windows. Las pruebas de negocio se mantienen en `Tests/ComprasTests.swift`.
 - No hay Xcode ni simulador iOS disponible en Windows. No se generaron capturas ni `.xcresult` nuevos.
 
 ### Trazabilidad actual de los nueve casos
