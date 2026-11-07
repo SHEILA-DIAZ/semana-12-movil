@@ -18,6 +18,20 @@
 
 **Verificación real:** Swift de Windows analizó la sintaxis del servicio y la prueba sin errores; `git diff --check` pasó. La ejecución de XCTest/SwiftData requiere macOS y queda pendiente.
 
+## Continuación en Windows · 2026-11-06 · Verificación y entrega
+
+**Trabajo:** revisión completa de modelos, servicios, B1–B9, proyecto, tests, historial e ícono. Se preservaron los avances existentes; solo se completaron búsqueda B8 y aislamiento de catálogos. Se incorporó al repositorio el PDF específico recibido, que inicialmente estaba sin seguimiento.
+
+**Herramientas:** PyMuPDF local en `.tools` para texto y renderizado de las siete páginas; Swift 6.4 para sintaxis; Python estándar para inspeccionar PNG, referencias del proyecto, esquema XML y presencia de casos. `.tools` y los renders temporales se ignoran en Git.
+
+**Evidencia actual:** sintaxis de 24 archivos Swift correcta, más la del nuevo verificador; AppIcon RGB 1024 × 1024 sin alfa; nombre Compras y referencias Xcode comprobados; 14 métodos XCTest definidos, incluyendo casos 01–09; `git diff --check` correcto. Se añadió `scripts/verificar_windows.ps1` con modo `-SoloSintaxis`, ejecutado correctamente, y un verificador que compila el archivo real de reglas con dobles mínimos y 24 comprobaciones.
+
+**Límite encontrado:** el modo de ejecución numérica no pudo compilar por falta de `stdlib.h`/SwiftShims del entorno C de Windows. No se ejecutaron esas comprobaciones ni XCTest, SwiftData, Xcode o simulador. Los resultados macOS ya documentados son históricos, sin ratificación en esta continuación.
+
+**Documentación:** README con índice, estado verificable y comandos macOS; PRUEBAS con trazabilidad de nueve casos y pasos pendientes; expediente con la instrucción vigente de conservar main. No se inventan capturas, conclusiones personales, visto bueno ni defensa oral.
+
+**Publicación:** commits separados para B8, aislamiento de catálogos y verificación/documentación; push normal a `ia-asistida` después de cada etapa. Sin squash ni force push; main permanece en `30a709e`.
+
 ## Consulta inicial
 
 **Contexto:** Laboratorio 11 de Tecsup; las actividades Contacto y Alumno ya están completas en otro repositorio.

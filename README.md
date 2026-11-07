@@ -2,6 +2,25 @@
 
 Aplicación iOS del **Grupo B · Caso Compras** del Laboratorio 11, implementada con **SwiftUI y SwiftData**. Repositorio independiente: [SHEILA-DIAZ/semana-12-movil](https://github.com/SHEILA-DIAZ/semana-12-movil).
 
+## Índice
+
+- [Estado de la continuación en Windows](#estado-de-la-continuación-en-windows)
+- [Abrir y ejecutar](#abrir-y-ejecutar)
+- [Pantallas de la guía](#pantallas-de-la-guía)
+- [Reglas de negocio](#reglas-de-negocio)
+- [Ejemplos de la guía](#ejemplos-de-la-guía)
+- [Estructura](#estructura)
+- [Compilar y probar](#compilar-y-probar)
+- [Documentación y ramas](#documentación-y-ramas)
+
+## Estado de la continuación en Windows
+
+Revisión del **2026-11-06** sobre `ia-asistida`, a partir de `da1a004`. Se leyeron las siete páginas del [PDF específico del Grupo B](documentos/Grupo%20B%20%C2%B7%20Caso%20Compras%20%28SwiftUI%20%2B%20SwiftData%29.pdf), incluidas las maquetas B1–B9 y la rúbrica, y se contrastaron con el código y los commits existentes. Las nueve pantallas y las reglas principales ya estaban implementadas.
+
+Se completó la búsqueda por proveedor en B8 y la validación del contexto de los registros al mantener catálogos. Hay **14 métodos XCTest**, incluidos los nueve casos del PDF y una nueva prueba de aislamiento entre almacenes, más el recorrido UI existente. Esta continuación verificó sintaxis de los 24 archivos Swift, referencias del proyecto/esquema e ícono PNG RGB de 1024 × 1024. **No se compiló la aplicación ni se ejecutaron XCTest o simulador iOS en Windows.**
+
+La ejecución del verificador de cálculos Foundation quedó bloqueada porque la instalación local no encuentra `stdlib.h` del entorno C de Windows. La matriz de evidencia y los pasos restantes están en [PRUEBAS.md](documentos/PRUEBAS.md). Se conserva la evidencia histórica documentada sin presentarla como una ejecución actual.
+
 ## Abrir y ejecutar
 
 Abrir `ComprasTecsup.xcodeproj`, elegir el esquema **ComprasTecsup** y un simulador con iOS 17 o posterior. El proyecto está incluido y no utiliza paquetes externos. `project.yml` permite regenerarlo opcionalmente con XcodeGen.
@@ -28,7 +47,7 @@ No se restablece el almacén automáticamente, no se inserta contenido de prueba
 | B5 · Nueva compra | Comprador de sesión, proveedor, producto, cantidad, costo, contado/crédito a 30 días, IGV y aviso desde S/ 5,000 |
 | B6 · Mis compras | Consulta de las compras propias con #Predicate; filtros Todas/Pendientes/Rechazadas y búsqueda por proveedor; motivo visible |
 | B7 · Aprobar | Pendientes y consulta de todas; nombre del solicitante, vista previa de inventario, aprobación y rechazo con motivo obligatorio |
-| B8 · Por pagar | Solo créditos aprobados; filtros con #Predicate de pendientes/vencidas/pagadas, etiqueta VENCIDA y swipe Pagar; total de deuda |
+| B8 · Por pagar | Solo créditos aprobados; filtros con #Predicate de pendientes/vencidas/pagadas y búsqueda por proveedor, etiqueta VENCIDA y swipe Pagar; total de toda la deuda |
 | B9 · Resumen | Inventario, crédito fiscal, deuda, pendientes de aprobación y gráfico de compras aprobadas por proveedor |
 
 **Comprador:** Productos, Proveedores, Compra, Mis compras. **Supervisor:** Resumen, Aprobar, Por pagar, Productos, Proveedores. El avatar muestra nombre, usuario y rol y permite cerrar sesión. Los permisos se validan también en los servicios, además de ocultar los controles que no corresponden.
@@ -69,16 +88,26 @@ UITests/           Recorrido de interfaz B1–B9
  documentacion:    documentos/EXPEDIENTE.md, documentos/PRUEBAS.md, PROMPTS.md
 ```
 
-El ícono se obtuvo de la región exacta **Ícono de Compras (Grupo B)** de la página 28 del PDF: caja blanca, flecha amarilla descendente y fondo verde/turquesa. Se rasterizó a PNG RGB de 1024 × 1024, sin transparencia ni esquinas recortadas. También se utiliza como marca del login. Display Name: **Compras**.
+El ícono existente corresponde a la referencia **Ícono de Compras (Grupo B)**: página 4 del PDF específico y página 28 de la guía completa, caja blanca, flecha amarilla descendente y fondo verde/turquesa. Es un PNG RGB de 1024 × 1024, sin transparencia ni esquinas recortadas. También se utiliza como marca del login. Display Name: **Compras**.
 
 ## Compilar y probar
 
-Entorno de desarrollo: Xcode 26.3 (17C529), SDK de simulador 26.2 y runtime iOS 26.3. Se utiliza DEVELOPER_DIR por comando sin cambiar la selección global de Xcode del equipo.
+En Windows con Swift instalado, comprobar sintaxis:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts\verificar_windows.ps1 -SoloSintaxis
+```
+
+Sin `-SoloSintaxis`, el script intenta compilar y ejecutar **el archivo real** `ReglasCompra.swift` con 24 comprobaciones numéricas y dobles mínimos de Producto/ErrorCompras, sin SwiftData ni interfaz. Requiere MSVC y Windows SDK correctamente configurados. Los dobles están fuera del target iOS. Ese modo no pudo ejecutarse en este equipo por falta de cabeceras C.
+
+En macOS con Xcode e iOS 17 o posterior, listar primero los destinos disponibles y elegir un simulador instalado. El entorno Xcode 26.3 descrito en los registros anteriores es histórico y no se verificó en esta continuación.
 
 ```sh
 export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
+xcodebuild -project ComprasTecsup.xcodeproj -scheme ComprasTecsup -showdestinations
 xcodebuild -project ComprasTecsup.xcodeproj -scheme ComprasTecsup -sdk iphonesimulator -derivedDataPath .build/App build
-xcodebuild -project ComprasTecsup.xcodeproj -scheme ComprasTecsup -destination 'platform=iOS Simulator,name=Compras Tecsup Pruebas' -parallel-testing-enabled NO -derivedDataPath .build/App test
+# Sustituir UUID_DEL_SIMULADOR por un destino de -showdestinations:
+xcodebuild -project ComprasTecsup.xcodeproj -scheme ComprasTecsup -destination 'platform=iOS Simulator,id=UUID_DEL_SIMULADOR' -parallel-testing-enabled NO -derivedDataPath .build/App -resultBundlePath .build/Compras-Verificacion.xcresult test
 ```
 
 La firma está desactivada para el simulador; para instalar en un dispositivo físico se debe configurar el equipo de desarrollo y la firma en Xcode. No se requiere conexión a Internet para usar la app.
@@ -88,8 +117,11 @@ La firma está desactivada para el simulador; para instalar en un dispositivo f�
 - [Expediente y decisiones técnicas](documentos/EXPEDIENTE.md).
 - [Resultados reales de pruebas y capturas](documentos/PRUEBAS.md).
 - [Registro de asistencia](PROMPTS.md).
+- [PDF específico del Grupo B, siete páginas](documentos/Grupo%20B%20%C2%B7%20Caso%20Compras%20%28SwiftUI%20%2B%20SwiftData%29.pdf).
 - [Guía principal](documentos/GLAB-S11-JLEONS-2026-02.pdf).
 
 Los commits se realizan en `ia-asistida`, con nombre SHEILA-DIAZ y correo sheila.diaz@tecsup.edu.pe. `manual` conserva solo el punto inicial del expediente; no se atribuye a trabajo manual el código generado con IA. El visto bueno docente debe aportarlo la estudiante: no se registra como concedido. Por instrucción expresa de la propietaria se avanzó con la construcción asistida.
+
+La continuación publica commits progresivos únicamente en `ia-asistida`, sin cambios a `main`, squash ni force push. En macOS queda por compilar, ejecutar las 14 pruebas y el recorrido UI, revisar B1–B9 y guardar capturas de la app y de Inicio con el nombre Compras. La página 7 del PDF ya contiene una captura, que no acredita esta revisión del código. El visto bueno, las conclusiones personales y la defensa oral corresponden a la estudiante.
 
 Por tratarse de la práctica, la clave se guarda como texto y el rol se elige al registrarse, tal como establece el PDF. No se presenta este mecanismo como autenticación de producción.

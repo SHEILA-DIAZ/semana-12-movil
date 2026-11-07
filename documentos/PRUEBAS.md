@@ -1,5 +1,44 @@
 # Verificación del caso Compras
 
+## Revisión actual · Windows · 2026-11-06
+
+Fuente principal: `Grupo B · Caso Compras (SwiftUI + SwiftData).pdf`, **siete páginas** leídas mediante extracción de texto y renderizado visual completo. B1–B3 están en página 1; B4–B6 en página 2; B7–B9 y reglas en página 3; nueve casos e ícono en página 4; instrucciones de entrega y rúbrica en páginas 5–6; captura de Inicio y enlace en página 7.
+
+Resultado real en esta continuación:
+
+- Swift 6.4 de Windows: análisis sintáctico de **24 archivos de Sources, Tests y UITests**, sin errores. No resuelve tipos del SDK, expande macros SwiftData ni valida la compilación iOS.
+- `git diff --check`: sin errores.
+- Proyecto Xcode: los 24 archivos figuran referenciados; esquema XML válido con targets unitario y UI. Catálogo AppIcon: PNG RGB 1024 × 1024 sin canal alfa; Display Name configurado en Compras.
+- **14 métodos XCTest definidos**, con los nueve casos originales y la nueva regresión de edición/borrado entre contextos. No ejecutados en Windows.
+- `scripts/verificar_windows.ps1 -SoloSintaxis`: ejecutado correctamente. El modo completo intenta compilar el archivo real ReglasCompra con 24 comprobaciones, pero quedó bloqueado por `stdlib.h file not found` / `could not build C module SwiftShims` en la instalación local. No se atribuye éxito numérico a ese intento.
+- No hay Xcode ni simulador iOS disponible en Windows. No se generaron capturas ni `.xcresult` nuevos.
+
+### Trazabilidad actual de los nueve casos
+
+| Caso | Implementación y prueba existente en ComprasTests | Estado de esta revisión |
+| --- | --- | --- |
+| 1 | Autenticacion/RegistroView; testCaso01UsuarioUnicoSinMayusculasYRegistroDirecto | Código revisado; ejecución macOS pendiente |
+| 2 | Autenticacion/LoginView; testCaso02LoginIncorrectoYValidacionDeClaves | Código revisado; ejecución macOS pendiente |
+| 3 | ReglasCompra/registrar; testCaso03CreditoPequenoActualizaStockCostoIGVYVencimiento | 1,200 + 216 = 1,416; promedio 112 contrastado con PDF; ejecución pendiente |
+| 4 | aplicar/ConsultasCompras; testCaso04ContadoQuedaPagadaYNoGeneraDeuda | Código revisado; ejecución macOS pendiente |
+| 5 | registrar/ResumenCompras; testCaso05CompraGrandeEsPendienteSinEfectos | 7,080 pendiente sin efectos; ejecución pendiente |
+| 6 | aprobar/prevision; testCaso06AprobarActualizaUnaSolaVezYResumen | Stock 90, promedio 115.555…; ejecución pendiente |
+| 7 | rechazar/RechazoForm/CompraFila; testCaso07RechazoExigeMotivoYSinEfectos | Motivo obligatorio y visible; ejecución pendiente |
+| 8 | pagos/PorPagarView/pagar; testCaso08CreditoVencidoPasaAPagadoSinAlterarInventario | Filtros, VENCIDA y pago revisados; ejecución pendiente |
+| 9 | propias/ContentView/servicios; testCaso09CompradorSoloVePropiasYNoPuedeAprobarRechazarNiPagar | Visibilidad y permisos revisados; ejecución pendiente |
+
+### Verificación pendiente en macOS
+
+1. Ejecutar los comandos del README con un simulador disponible y conservar el `.xcresult`. Confirmar las 14 pruebas unitarias, el recorrido UI y la reapertura SQLite. Los resultados previos no sustituyen esta ejecución.
+2. En B8, con dos proveedores y créditos aprobados, buscar uno: deben combinarse búsqueda y filtros Pendientes/Vencidas/Pagadas. Buscar un nombre inexistente debe mostrar la lista vacía. Borrar el texto restaura resultados. El total inferior conserva toda la deuda y baja al pagar.
+3. Revisar B1–B9 contra las maquetas con teclado, texto grande y pantalla pequeña; confirmar pestañas por rol y ausencia de Pagar para Comprador. El recorrido UI automatizado existente no incluye todavía la nueva búsqueda B8.
+4. Capturar B1–B9, rechazo con motivo, crédito vencido/pagado e Inicio con ícono y nombre Compras. Adjuntar evidencia real sin sustituirla por maquetas o imágenes del PDF.
+5. Completar integrantes y visto bueno del expediente, conclusiones personales y defensa oral. Estos elementos académicos no se acreditan desde el entorno técnico.
+
+## Registro histórico previo a esta continuación
+
+Los apartados siguientes se conservan del repositorio recibido. Sus resultados de Xcode son antecedentes declarados, **no ejecuciones realizadas o reproducidas en Windows**. No se encontraron `.xcresult` ni capturas independientes versionadas que permitan ratificar todos esos resultados.
+
 La implementación se contrasta con las reglas comunes de páginas 19–20 y con el Grupo B de páginas 24–29. Las nueve maquetas B1–B9 se revisaron visualmente en las páginas 25–27. El ícono corresponde a la referencia del Grupo B de página 28.
 
 ## Entorno

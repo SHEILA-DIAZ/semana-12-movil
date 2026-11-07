@@ -10,6 +10,7 @@ Laboratorio 11 · Grupo B · Programación en Móviles Avanzado · Tecsup.
 - Otros integrantes: por completar, si corresponde.
 - Aplicación: Compras. Tecnología: SwiftUI y SwiftData, iOS 17 o posterior.
 - Fuente: GLAB-S11-JLEONS-2026-02.pdf, reglas comunes de páginas 19–20, Grupo B de páginas 24–29 y plantilla de página 30.
+- Referencia específica revisada el 2026-11-06: `Grupo B · Caso Compras (SwiftUI + SwiftData).pdf`, siete páginas con maquetas, reglas, rúbrica y nueve casos. El avance actual y las verificaciones pendientes están en PRUEBAS.md.
 - Alcance propuesto: nueve pantallas B1–B9, nivel base, filtros y resumen del supervisor. No incluye el caso Ventas.
 
 ## Modelo de datos
@@ -106,7 +107,7 @@ Se seguirán las maquetas de páginas 25–27. Formularios de mantenimiento y re
 10. B9: resumen y gráfico; ícono de Compras.
 11. Casos de prueba, capturas y verificación final.
 
-La rama main contendrá el expediente y la entrega final; ia-asistida se usará para construcción con IA. La rama manual se reservará para trabajo hecho efectivamente sin asistencia: no se etiquetará código generado como manual. Cada consulta y sus decisiones se anotarán en PROMPTS.md. El remoto se conectará cuando la estudiante facilite el nuevo repositorio.
+El plan inicial contemplaba una entrega posterior en main. Por instrucción vigente de la propietaria, la continuación conserva main sin modificaciones y publica cada etapa únicamente en ia-asistida, sin squash ni force push. El remoto ya está conectado a `https://github.com/SHEILA-DIAZ/semana-12-movil`. La rama manual se reserva para trabajo hecho efectivamente sin asistencia: no se etiqueta código generado como manual. Cada consulta y sus decisiones se anotan en PROMPTS.md.
 
 ## Visto bueno del docente
 
