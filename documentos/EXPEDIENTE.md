@@ -10,7 +10,7 @@ Laboratorio 11 · Grupo B · Programación en Móviles Avanzado · Tecsup.
 - Otros integrantes: por completar, si corresponde.
 - Aplicación: Compras. Tecnología: SwiftUI y SwiftData, iOS 17 o posterior.
 - Fuente: GLAB-S11-JLEONS-2026-02.pdf, reglas comunes de páginas 19–20, Grupo B de páginas 24–29 y plantilla de página 30.
-- Referencia específica revisada el 2026-11-06: `Grupo B · Caso Compras (SwiftUI + SwiftData).pdf`, siete páginas con maquetas, reglas, rúbrica y nueve casos. El avance actual y las verificaciones pendientes están en PRUEBAS.md.
+- Referencia específica revisada el 2026-11-06: `Grupo B · Caso Compras (SwiftUI + SwiftData).pdf`, siete páginas con maquetas, reglas, rúbrica y nueve casos. El estado de verificación está en el README.
 - Alcance propuesto: nueve pantallas B1–B9, nivel base, filtros y resumen del supervisor. No incluye el caso Ventas.
 
 ## Modelo de datos
@@ -89,9 +89,6 @@ Se seguirán las maquetas de páginas 25–27. Formularios de mantenimiento y re
 9. Comprador: no ve compras ajenas ni puede aprobar, rechazar o pagar.
 10. Caso adicional: volver a aprobar una compra aprobada se rechaza; stock y promedio no cambian.
 11. Caso adicional: subtotal 4,237.29, IGV redondeado 762.71, total exactamente 5,000: debe quedar pendiente.
-12. Borrar producto, proveedor o usuario con compras: bloqueo y mensaje; sin pérdida de registros.
-13. Cerrar y relanzar: usuarios, productos, proveedores y compras persisten; la sesión vuelve al login.
-14. Clave corta o confirmación distinta: no crea cuenta. Registro válido entra directamente con las pestañas del rol.
 
 ## Plan de commits y uso de IA
 
