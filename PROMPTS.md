@@ -1,5 +1,15 @@
 # Registro de asistencia de IA
 
+## Continuación en Windows · 2026-11-06 · B8
+
+**Solicitud:** continuar el proyecto existente en `ia-asistida`, leer las siete páginas de `documentos/Grupo B · Caso Compras (SwiftUI + SwiftData).pdf`, contrastar código e historial, completar pendientes y publicar cada etapa sin modificar main.
+
+**Revisión:** se extrajo el texto y se inspeccionaron visualmente las siete páginas, incluidas maquetas B1–B9, modelos, reglas, nueve casos y rúbrica. El historial inicial termina en `da1a004`; las nueve pantallas y reglas base ya estaban implementadas. Se preservan esos avances.
+
+**Faltante corregido:** B8 no ofrecía búsqueda por proveedor del Nivel +. Se agregó búsqueda combinada con los filtros existentes con #Predicate; el total por pagar sigue representando toda la deuda. La acción Pagar exige también rol Supervisor en la vista, además del servicio.
+
+**Verificación:** revisión del cambio y análisis sintáctico con Swift de Windows. No se dispone de SwiftUI, SwiftData, Xcode ni simulador iOS en este sistema; la prueba visual queda para macOS. Los resultados históricos de Xcode no corresponden a esta continuación.
+
 ## Consulta inicial
 
 **Contexto:** Laboratorio 11 de Tecsup; las actividades Contacto y Alumno ya están completas en otro repositorio.

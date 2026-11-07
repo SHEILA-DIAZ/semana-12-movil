@@ -4,3 +4,5 @@ DerivedData/
 *.xcresult/
 xcuserdata/
 *.xcuserstate
+.tools/
+.revision-pdf/

@@ -13,17 +13,19 @@ struct PorPagarView: View {
     @Query(filter: #Predicate<Compra> { $0.estado == "Aprobada" && $0.alCredito && !$0.pagada })
     private var pendientes: [Compra]
     @State private var filtro: FiltroPagos = .pendientes
+    @State private var busqueda = ""
     @State private var ahora = Date()
     @Environment(\.scenePhase) private var scenePhase
     var body: some View {
         VStack(spacing: 0) {
             Picker("Pagos", selection: $filtro) { ForEach(FiltroPagos.allCases) { Text($0.rawValue).tag($0) } }
                 .pickerStyle(.segmented).padding(.horizontal).padding(.bottom, 8)
-            PagosLista(usuario: usuario, filtro: filtro, ahora: ahora)
+            PagosLista(usuario: usuario, filtro: filtro, ahora: ahora, busqueda: busqueda)
             ImporteFila(titulo: "Total por pagar", valor: pendientes.reduce(0) { $0 + $1.total })
                 .font(.headline).padding().background(.regularMaterial).accessibilityIdentifier("totalPorPagar")
         }
         .navigationTitle("Por pagar")
+        .searchable(text: $busqueda, prompt: "Buscar proveedor")
         .toolbar { ToolbarItem(placement: .topBarTrailing) { MenuCuenta() } }
         .onChange(of: scenePhase) { _, phase in if phase == .active { ahora = Date() } }
         .onReceive(Timer.publish(every: 60, on: .main, in: .common).autoconnect()) { ahora = $0 }
@@ -33,20 +35,25 @@ struct PorPagarView: View {
 private struct PagosLista: View {
     let usuario: Usuario
     let ahora: Date
+    let busqueda: String
     @Environment(\.modelContext) private var context
     @Query private var compras: [Compra]
     @State private var error: String?
-    init(usuario: Usuario, filtro: FiltroPagos, ahora: Date) {
+    init(usuario: Usuario, filtro: FiltroPagos, ahora: Date, busqueda: String) {
         self.usuario = usuario; self.ahora = ahora
+        self.busqueda = busqueda
         let pagadas = filtro == .pagadas
         let soloVencidas = filtro == .vencidas
         _compras = Query(filter: ConsultasCompras.pagos(pagadas: pagadas, vencidas: soloVencidas, ahora: ahora),
                          sort: \Compra.vence)
     }
+    private var filtradas: [Compra] {
+        compras.filter { busqueda.limpio.isEmpty || ($0.proveedor?.nombre.localizedCaseInsensitiveContains(busqueda.limpio) ?? false) }
+    }
     var body: some View {
         List {
-            if compras.isEmpty { ContentUnavailableView("Sin compras en este filtro", systemImage: "creditcard") }
-            ForEach(compras) { compra in
+            if filtradas.isEmpty { ContentUnavailableView("Sin compras en este filtro", systemImage: "creditcard") }
+            ForEach(filtradas) { compra in
                 VStack(alignment: .leading, spacing: 7) {
                     CompraFila(compra: compra, mostrarComprador: true)
                     HStack {
@@ -58,7 +65,7 @@ private struct PagosLista: View {
                 }
                 .accessibilityIdentifier("pago-\(compra.producto?.nombre ?? "compra")")
                 .swipeActions(edge: .trailing, allowsFullSwipe: false) {
-                    if compra.estaPorPagar {
+                    if usuario.esSupervisor && compra.estaPorPagar {
                         Button("Pagar") {
                             do { try ServicioCompras(context: context).pagar(compra, actor: usuario) }
                             catch { self.error = error.localizedDescription }
