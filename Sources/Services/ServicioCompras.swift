@@ -21,6 +21,9 @@ final class ServicioCompras {
     func guardarProducto(_ producto: Producto? = nil, nombre: String, categoria: String,
                          stock: Int, costo: Double, actor: Usuario) throws {
         try exigirSupervisor(actor)
+        if let producto, producto.modelContext !== context {
+            throw ErrorCompras.validacion("El producto no pertenece al almacén de esta sesión.")
+        }
         guard !nombre.limpio.isEmpty, !categoria.limpio.isEmpty else {
             throw ErrorCompras.validacion("Completa nombre y categoría.")
         }
@@ -36,11 +39,15 @@ final class ServicioCompras {
     }
     func eliminarProducto(_ producto: Producto, actor: Usuario) throws {
         try exigirSupervisor(actor)
+        guard producto.modelContext === context else { throw ErrorCompras.validacion("El producto no pertenece al almacén de esta sesión.") }
         guard producto.compras.isEmpty else { throw ErrorCompras.validacion("No se puede borrar un producto que tiene compras.") }
         try transaccion { context.delete(producto) }
     }
     func guardarProveedor(_ proveedor: Proveedor? = nil, nombre: String, ruc: String, actor: Usuario) throws {
         try exigirSupervisor(actor)
+        if let proveedor, proveedor.modelContext !== context {
+            throw ErrorCompras.validacion("El proveedor no pertenece al almacén de esta sesión.")
+        }
         guard !nombre.limpio.isEmpty, !ruc.limpio.isEmpty else { throw ErrorCompras.validacion("Completa nombre y RUC.") }
         try transaccion {
             let dato = proveedor ?? Proveedor(nombre: nombre.limpio, ruc: ruc.limpio)
@@ -50,11 +57,13 @@ final class ServicioCompras {
     }
     func eliminarProveedor(_ proveedor: Proveedor, actor: Usuario) throws {
         try exigirSupervisor(actor)
+        guard proveedor.modelContext === context else { throw ErrorCompras.validacion("El proveedor no pertenece al almacén de esta sesión.") }
         guard proveedor.compras.isEmpty else { throw ErrorCompras.validacion("No se puede borrar un proveedor que tiene compras.") }
         try transaccion { context.delete(proveedor) }
     }
     func eliminarUsuario(_ usuario: Usuario, actor: Usuario) throws {
         try exigirSupervisor(actor)
+        guard usuario.modelContext === context else { throw ErrorCompras.validacion("El usuario no pertenece al almacén de esta sesión.") }
         guard usuario.compras.isEmpty else { throw ErrorCompras.validacion("No se puede borrar un usuario que tiene compras.") }
         guard usuario != actor else { throw ErrorCompras.validacion("No puedes borrar la cuenta de tu sesión activa.") }
         try transaccion { context.delete(usuario) }

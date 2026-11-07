@@ -162,6 +162,26 @@ final class ComprasTests: XCTestCase {
         XCTAssertEqual(try e.context.fetchCount(FetchDescriptor<Producto>()), 1)
     }
 
+    func testCatalogosRechazanRegistrosDeOtroContextoOSinInsertar() throws {
+        let e = try escenario()
+        let ajeno = try escenario()
+        let suelto = Producto(nombre: "Sin insertar", categoria: "Otros", stock: 0, costoPromedio: 0)
+        for producto in [ajeno.producto, suelto] {
+            XCTAssertThrowsError(try e.servicio.guardarProducto(producto, nombre: "Cambio", categoria: "Otros", stock: 9, costo: 1, actor: e.supervisor))
+            XCTAssertThrowsError(try e.servicio.eliminarProducto(producto, actor: e.supervisor))
+        }
+        XCTAssertThrowsError(try e.servicio.guardarProveedor(ajeno.proveedor, nombre: "Cambio", ruc: "123", actor: e.supervisor))
+        XCTAssertThrowsError(try e.servicio.eliminarProveedor(ajeno.proveedor, actor: e.supervisor))
+        XCTAssertThrowsError(try e.servicio.eliminarUsuario(ajeno.comprador, actor: e.supervisor))
+        XCTAssertEqual(ajeno.producto.nombre, "Laptop Pro 14")
+        XCTAssertEqual(ajeno.producto.stock, 40)
+        XCTAssertEqual(ajeno.proveedor.nombre, "Distribuidora Lima")
+        XCTAssertEqual(try ajeno.context.fetchCount(FetchDescriptor<Usuario>()), 2)
+        XCTAssertEqual(try e.context.fetchCount(FetchDescriptor<Producto>()), 1)
+        XCTAssertFalse(e.context.hasChanges)
+        XCTAssertFalse(ajeno.context.hasChanges)
+    }
+
     func testSQLiteReabreUsuariosComprasRelacionesYEstadoPagado() throws {
         let folder = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)

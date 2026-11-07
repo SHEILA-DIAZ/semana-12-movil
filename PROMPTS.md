@@ -10,6 +10,14 @@
 
 **Verificación:** revisión del cambio y análisis sintáctico con Swift de Windows. No se dispone de SwiftUI, SwiftData, Xcode ni simulador iOS en este sistema; la prueba visual queda para macOS. Los resultados históricos de Xcode no corresponden a esta continuación.
 
+## Continuación en Windows · 2026-11-06 · Aislamiento de catálogos
+
+**Hallazgo:** la edición y el borrado de catálogos validaban al Supervisor, pero no el contexto del registro recibido. A diferencia de las operaciones de compra, podían intentar modificar objetos de otro almacén.
+
+**Cambio:** se exige el contexto de la sesión para editar y borrar Producto/Proveedor y borrar Usuario, antes de cualquier mutación. Se añadió una prueba XCTest con dos almacenes independientes y un producto sin insertar; comprueba rechazo sin cambios en ambos contextos.
+
+**Verificación real:** Swift de Windows analizó la sintaxis del servicio y la prueba sin errores; `git diff --check` pasó. La ejecución de XCTest/SwiftData requiere macOS y queda pendiente.
+
 ## Consulta inicial
 
 **Contexto:** Laboratorio 11 de Tecsup; las actividades Contacto y Alumno ya están completas en otro repositorio.
